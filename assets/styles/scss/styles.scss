@@ -1,0 +1,384 @@
+
+
+
+//------------------------VARIABLES
+
+$blue:rgba(114,155,199,1);//#729bc7 
+$darker-blue:rgba(89,121,156,1);//#59799c
+$blue-alpha-hi:rgba(114,155,199,0.8);
+$blue-alpha-lo:rgba(114,155,199,0.7);
+$orange:rgba(242,140,29,1);//#f28c1d
+$orange-alpha:rgba(242,140,29,0.8);
+$green:rgba(147,164,69,1);//#93a445
+$yellow:rgba(253,183,36,1);//#fdb724
+$dark-gray:rgba(19,11,2,1);//#130b02
+$img-outline: 2px solid rgba(230,230,230,1);//rgba(230,230,230,1) #e6e6e6
+
+$base-font-size:    16px;
+$base-line-height:  22px;
+$base-font-family: "Open Sans", sans-serif;
+$base-spacing-unit: $base-line-height;
+$half-spacing-unit: $base-spacing-unit;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$bp-small : 24em;
+$bp-small-2 : 29.75em;
+$bp-small-3 : 39.8em;
+$bp-med : 46.8em;
+$bp-med-2 : 48em;
+$bp-large : 50em;
+$bp-large-2 : 54.5em;
+$bp-xl : 60em;
+$bp-xl-2 : 67em;
+
+//------------------------IMPORTS
+
+@import "normalize";
+@import "reset";
+@import "susy";
+@import "breakpoint";
+// @import "magnific";
+
+//------------------------MIXINS
+
+//Map object new in Sass 3.3
+$susy: (
+    columns:12,
+    gutters:1/4,
+    math:fluid,
+    output:float,
+    gutter-position: inside
+);
+
+//gutter-position: split, inside(changes to padding) etc.
+
+// $widelayout: (
+//     columns:24,
+//     gutters:1/4,
+//     math:fluid,
+//     output:float,
+//     gutter-position: inside
+// );
+
+
+//Layout function
+
+// @include layout($widelayout);
+@include layout(12 1/4 fluid float split);
+// @include layout(12 (60px 10px) split static);// standard 960 grid
+// $map: layout(12 1/4 fluid float split);
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+//------------------------
+//------------------------
+/* apply a natural box layout model to all elements by Paul Irish*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+//------------------------
+//------------------------
+
+
+html,body {
+    overflow-x:hidden;//fix horizontal scroll on ios
+
+}
+
+html {
+    overflow-y:scroll;//stop scrollbar push
+}
+
+body {
+    overflow-y:auto;
+    // color:$dark-gray;
+    // font-size: $base-font-size;
+    // font-family: $base-font-family; 
+    // line-height: $base-line-height;
+    text-rendering: optimizelegibility;
+
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-tap-highlight-color:rgba(0,0,0,0); 
+    -moz-text-size-adjust: none;
+    -moz-font-smoothing: antialiased;
+    -ms-tap-highlight-color:rgba(0,0,0,0); 
+    -ms-text-size-adjust: none;
+    -ms-font-smoothing: antialiased;
+
+}
+
+a {text-decoration: none;}
+ul {list-style-type: none;}
+
+
+    // -webkit-transition: all 0.2s ease-in-out;
+    // -moz-transition: all 0.2s ease-in-out;
+    // -o-transition: all 0.2s ease-in-out;
+    // transition: all 0.2s ease-in-out;
+
+
+//------------------------HEADER
+
+
+//------------------------MAIN
+
+
+//------------------------NAV
+
+
+//------- NAV SUBNAV -------//
+
+// .call {
+//     cursor: text;
+// }
+
+
+
+
+///contact form
+///******** CONTACT FORM
+
+
+
+// input, input[type="password"], input[type="search"] {
+//     width: 100%;
+// }
+
+// textarea {
+//     width: 100%;
+// }
+
+
+
+// *:focus {
+//     outline: 0;
+
+//     background-color: $blue;
+// }
+
+// textarea:focus, input:focus{
+//     outline: 0;
+//     background-color: #fff;
+//     color:$darker-blue;
+//     font-style: normal;
+
+//     font-weight: 300;
+// }
+
+
+// //remove red glow around email input in firefox
+// input[type="email"] { 
+//     box-shadow: none;
+// }
+
+
+// //remove ios rounded corners
+// input, textarea {
+//     -webkit-appearance: none;
+//     -webkit-border-radius:0; 
+//     border-radius:0;
+// }
+
+
+
+
+
+
+
+
+
+
+// .content-contact {
+
+//         a {
+//             color:blue;
+//         }
+
+//         a:hover {color: orange; text-decoration: underline;}
+
+
+//     @include breakpoint ($bp-xl) {
+//         // @include span(4);
+//         padding-left: 15px;
+
+//         p {
+//             font-size:14px;
+//         }
+
+//         a {
+//             color:blue;
+//             font-size:12px;
+//         }
+
+//         a:hover {color: orange; text-decoration: underline;}
+//     } 
+
+//     @include breakpoint ($bp-xl) {
+//         a {
+//             color:blue;
+//             font-size:14px;
+//         }
+
+//     }
+
+// }
+
+
+// .contact-form {
+//     @include breakpoint ($bp-xl) {
+//         // @include span(8);s
+//     } 
+// }
+
+// .btn--positive{
+//     background-color:orange;
+//     color:#fff;
+//     font-family: 'Cabin', sans-serif; 
+// }
+
+// .btn--positive:hover {
+//     background-color:orange;
+// }
+
+// form {
+//   width: 100%;
+//   @include clearfix;
+// }
+
+// .form-fields {
+//     list-style:none;
+//     margin:0;
+
+//     li {
+//         // @extend %sass-margin-bottom;
+//         margin-bottom:0;
+//         display: inline-block;
+//         width: 100%;
+
+//         @include breakpoint ($bp-xl) {
+//             // width: 50%;
+//         } 
+//     }
+
+//     li:last-child{
+//         width: 100%;
+//     }
+// }
+
+// .text-input,
+// textarea{
+//   padding: 10px;
+//   display: inline-block;
+//   border: 1px solid rgba(255,255,255,0.7);
+//   width: 100%;
+
+//   background-color: #f5f4f1;
+//   color:#8db7e5;
+//   font-weight: 300;
+//   font-style: italic;
+//   margin-bottom: 1em;
+    
+// }
+
+// textarea {
+//   resize:none;
+//   margin-bottom: 1.2em;
+// }
+
+// .submit {
+//     width: 100%;
+//     padding:15px 0;
+
+//     @include breakpoint ($bp-xl) {
+//         width: 50%;
+//     } 
+// }
+
+// //
+
+
+// ::-webkit-input-placeholder { /* WebKit browsers */
+//     font-style: italic;
+//     color:#8db7e5;
+//     // color:#fff;
+
+//     font-weight: 300;
+// }
+// :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//     font-style: italic;
+//     // color:#8db7e5;
+//     color:#8db7e5;
+//     font-weight: 300;
+// }
+// ::-moz-placeholder { /* Mozilla Firefox 19+ */
+//     font-style: italic;
+//     // color:#8db7e5;
+//    color:#8db7e5;
+//     font-weight: 300;
+// }
+// :-ms-input-placeholder { /* Internet Explorer 10+ */
+//     font-style: italic;
+//     // color:#8db7e5;
+//     color:#8db7e5;
+//     font-weight: 300;
+// }
+
+
+
+
+// .btn {line-height: 1;}
+
+// input[type=submit] {
+//     // border-radius: 5px;
+//     border: 0;
+//     // width: 80px;
+//     // height:25px;
+//     // font-family: Tahoma;
+//     background: $blue;
+
+//     box-shadow: 2px 2px 3px 2px rgba(20,20,20,.3); 
+
+//     font-weight: 800;
+//     font-size: 1.6em;
+//     /* Old browsers */
+//     // background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+//     /* FF3.6+ */
+//     // background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f4f4f4), color-stop(100%, #ededed));
+//     /* Chrome,Safari4+ */
+//     // background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+//     /* Chrome10+,Safari5.1+ */
+//     // background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+//     /* Opera 11.10+ */
+//     // background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+//     /* IE10+ */
+//     // background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
+//     /* W3C */
+//     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+//     /* IE6-9 */
+
+//     -webkit-transition: all 0.1s ease-in-out;
+//     -moz-transition: all 0.1s ease-in-out;
+//     -o-transition: all 0.1s ease-in-out;
+//     transition: all 0.1s ease-in-out;
+
+
+// }
+
+// input[type=submit]:hover {
+//     background: #8db7e5;
+
+//         -webkit-transition: all 0.1s ease-in-out;
+//     -moz-transition: all 0.1s ease-in-out;
+//     -o-transition: all 0.1s ease-in-out;
+//     transition: all 0.1s ease-in-out;
+// }
